@@ -1,0 +1,57 @@
+
+led.o:     file format elf32-littlearm
+
+
+Disassembly of section .text:
+
+00000000 <init_led>:
+   0:	b480      	push	{r7}
+   2:	af00      	add	r7, sp, #0
+   4:	bf00      	nop
+   6:	46bd      	mov	sp, r7
+   8:	bc80      	pop	{r7}
+   a:	4770      	bx	lr
+
+Disassembly of section .comment:
+
+00000000 <.comment>:
+   0:	43434700 	movtmi	r4, #14080	; 0x3700
+   4:	3128203a 			; <UNDEFINED> instruction: 0x3128203a
+   8:	2d373a35 	vldmdbcs	r7!, {s6-s58}
+   c:	38313032 	ldmdacc	r1!, {r1, r4, r5, ip, sp}
+  10:	2d32712d 	ldfcss	f7, [r2, #-180]!	; 0xffffff4c
+  14:	37202936 			; <UNDEFINED> instruction: 0x37202936
+  18:	312e332e 			; <UNDEFINED> instruction: 0x312e332e
+  1c:	31303220 	teqcc	r0, r0, lsr #4
+  20:	32363038 	eorscc	r3, r6, #56	; 0x38
+  24:	72282032 	eorvc	r2, r8, #50	; 0x32
+  28:	61656c65 	cmnvs	r5, r5, ror #24
+  2c:	20296573 	eorcs	r6, r9, r3, ror r5
+  30:	4d52415b 	ldfmie	f4, [r2, #-364]	; 0xfffffe94
+  34:	626d652f 	rsbvs	r6, sp, #197132288	; 0xbc00000
+  38:	65646465 	strbvs	r6, [r4, #-1125]!	; 0xfffffb9b
+  3c:	2d372d64 	ldccs	13, cr2, [r7, #-400]!	; 0xfffffe70
+  40:	6e617262 	cdpvs	2, 6, cr7, cr1, cr2, {3}
+  44:	72206863 	eorvc	r6, r0, #6488064	; 0x630000
+  48:	73697665 	cmnvc	r9, #105906176	; 0x6500000
+  4c:	206e6f69 	rsbcs	r6, lr, r9, ror #30
+  50:	39313632 	ldmdbcc	r1!, {r1, r4, r5, r9, sl, ip, sp}
+  54:	005d3730 	subseq	r3, sp, r0, lsr r7
+
+Disassembly of section .ARM.attributes:
+
+00000000 <.ARM.attributes>:
+   0:	00003241 	andeq	r3, r0, r1, asr #4
+   4:	61656100 	cmnvs	r5, r0, lsl #2
+   8:	01006962 	tsteq	r0, r2, ror #18
+   c:	00000028 	andeq	r0, r0, r8, lsr #32
+  10:	726f4305 	rsbvc	r4, pc, #335544320	; 0x14000000
+  14:	2d786574 	cfldr64cs	mvdx6, [r8, #-464]!	; 0xfffffe30
+  18:	0600344d 	streq	r3, [r0], -sp, asr #8
+  1c:	094d070d 	stmdbeq	sp, {r0, r2, r3, r8, r9, sl}^
+  20:	14041202 	strne	r1, [r4], #-514	; 0xfffffdfe
+  24:	17011501 	strne	r1, [r1, -r1, lsl #10]
+  28:	19011803 	stmdbne	r1, {r0, r1, fp, ip}
+  2c:	1e011a01 	vmlane.f32	s2, s2, s2
+  30:	Address 0x00000030 is out of bounds.
+
